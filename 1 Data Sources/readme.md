@@ -1,4 +1,4 @@
-Table: Feedback
+##Table: Feedback
 feedback_id (string): Unique identifier for each feedback entry.
 order_id (string): Identifier linking the feedback to a specific order.
 feedback (integer): Numeric representation of the feedback received.
@@ -7,7 +7,7 @@ feedback_answer_date (timestamp): Timestamp indicating when the feedback was ans
 Purpose:
 The "Feedback" table captures information about customer feedback, associating feedback responses with specific orders.
 ================================================================================================================================
-Table: Order
+##Table: Order
 order_id (string): Unique identifier for each order.
 user_name (string): Name of the user who placed the order.
 order_status (string): Current status of the order.
@@ -19,7 +19,7 @@ estimated_time_delivery (date): Estimated delivery date for the order.
 Purpose:
 The "Order" table contains information about orders, including user details, order status, and important timestamps related to the order lifecycle.
 ======================================================================================================================================================================
-Table: Order Item
+##Table: Order Item
 order_id (string): Identifier linking the order item to a specific order.
 order_item_id (int): Unique identifier for each order item.
 product_id (string): Identifier linking the order item to a specific product.
@@ -39,7 +39,7 @@ payment_value (double): Value of the payment.
 Purpose:
 The "Payment" table records payment details associated with specific orders and products.
 ===============================================================================================
-Table: Product
+##Table: Product
 product_id (string): Unique identifier for each product.
 product_category (string): Category to which the product belongs.
 product_name_length (int): Length of the product name.
@@ -52,7 +52,7 @@ product_width_cm (int): Width of the product in centimeters.
 Purpose:
 The "Product" table contains detailed information about individual products, including their characteristics and dimensions.
 ========================================================================================================================================
-Table: Seller
+##Table: Seller
 seller_id (string): Unique identifier for each seller.
 seller_zip_code (int): ZIP code of the seller.
 seller_city (string): City where the seller is located.
@@ -60,7 +60,7 @@ seller_state (string): State where the seller is located.
 Purpose:
 The "Seller" table provides information about individual sellers, including their location details.
 ===================================================================================================================
-Table: User
+##Table: User
 user_name (string): Name of the user.
 customer_zip_code (int): ZIP code of the user.
 customer_city (string): City where the user is located.
