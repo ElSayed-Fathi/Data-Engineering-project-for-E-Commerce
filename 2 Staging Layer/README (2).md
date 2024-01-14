@@ -25,7 +25,7 @@ CREATE TABLE [dbo].[Feedback_Dim](
 ) ON [PRIMARY]
 GO
 ```
-![Feedback Workflow](feeback_workflow.png)
+![Feedback Workflow](Feedback_Container.PNG)
 
 The "Feedback" table captures feedback details with minimal transformation, preserving primary keys.
 
