@@ -209,7 +209,7 @@ The "Sales" table consolidates data from various sources, linking to relevant ta
 
 For each source table, an Alteryx workflow is created to facilitate the movement of data into the Staging Layer. The workflow ensures data consistency and integrity during the extraction and loading process.
 
-![Full Staging workflow](Full Workflow.PNG)
+![Full Staging workflow](Full_Workflow.PNG)
 
 
 
