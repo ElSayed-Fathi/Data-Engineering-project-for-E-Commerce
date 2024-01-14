@@ -6,7 +6,7 @@ The Staging Layer is a critical step in the data engineering process, where raw 
 
 ## Schema Design
 
-![Stating Model](Statging_model.png)
+![Stating Model](Data_Warehouse_Diagram.png)
 
 ### Feedback Table
 
