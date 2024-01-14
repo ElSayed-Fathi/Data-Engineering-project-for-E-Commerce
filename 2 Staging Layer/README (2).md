@@ -51,7 +51,7 @@ GO
 
 The "Order Track" table maintains order details, including status and timestamps.
 
-![Order Track Workflow](order_track_workflow.png)
+![Order Track Workflow](Order_Container.PNG)
 ### Payment Table
 
 ```sql
@@ -72,7 +72,7 @@ GO
 
 The "Payment" table records payment details with minimal transformation, ensuring data consistency.
 
-![Payment workflow](payment_workflow.png)
+![Payment workflow](Payment_Container.PNG)
 
 ### Product Table
 
@@ -98,7 +98,7 @@ GO
 
 The "Product" table holds product information, maintaining the integrity of primary keys.
 
-![product_workflow](product_workflow.png)
+![product_workflow](Product_Container.PNG)
 
 ### Seller Table
 
@@ -119,7 +119,7 @@ GO
 
 The "Seller" table captures seller details with minimal transformation.
 
-![Seller Workflow](seller_workflow.png)
+![Seller Workflow](Seller_Container.PNG)
 
 ### User Data Table
 
@@ -139,7 +139,7 @@ GO
 ```
 
 The "User Data" table holds user information, and the data is truncated for a clean slate before ingestion.
-![User Workflow](user_workflow.png)
+![User Workflow](User_Container.PNG)
 
 ### Sales Table
 
@@ -203,13 +203,13 @@ GO
 
 The "Sales" table consolidates data from various sources, linking to relevant tables through foreign keys.
 
-![Sales Workflow](sales_workflow.png)
+![Sales Workflow](Sales_Contaone.PNG)
 
 ## Alteryx Workflow
 
 For each source table, an Alteryx workflow is created to facilitate the movement of data into the Staging Layer. The workflow ensures data consistency and integrity during the extraction and loading process.
 
-![Full Staging workflow](full_statging_workflow.png)
+![Full Staging workflow](Full Workflow.PNG)
 
 
 
