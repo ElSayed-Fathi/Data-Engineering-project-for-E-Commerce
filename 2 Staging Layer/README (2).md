@@ -203,7 +203,7 @@ GO
 
 The "Sales" table consolidates data from various sources, linking to relevant tables through foreign keys.
 
-![Sales Workflow](Sales_Contaone.PNG)
+![Sales Workflow](Sales_Container.PNG)
 
 ## Alteryx Workflow
 
