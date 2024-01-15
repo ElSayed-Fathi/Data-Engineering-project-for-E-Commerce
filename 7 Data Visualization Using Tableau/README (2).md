@@ -10,7 +10,6 @@ In the culmination of this data engineering project, we present insightful visua
 
 - **Total Orders:**
   - Distinct number of orders: 99.44 K
-  # Page one
 ![Total Orders](total_orders.PNG)
 
 - **Average Installments:**
