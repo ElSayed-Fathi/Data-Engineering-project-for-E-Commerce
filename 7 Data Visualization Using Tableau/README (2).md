@@ -10,8 +10,7 @@ In the culmination of this data engineering project, we present insightful visua
 
 - **Total Orders:**
   - Distinct number of orders: 99.44 K
-![Total Orders](total_orders.PNG)
-
+    
 - **Average Installments:**
   - AVERAGEX function calculates the average number of installments, yielding 2.853 on average.
   ![ average number of installments](average_installment.PNG)
