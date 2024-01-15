@@ -11,11 +11,11 @@ In the culmination of this data engineering project, we present insightful visua
 - **Total Orders:**
   - Distinct number of orders: 99.44 K
   # Page one
-![Total Orders](total_orders.png)
+![Total Orders](total_orders.PNG)
 
 - **Average Installments:**
   - AVERAGEX function calculates the average number of installments, yielding 2.853 on average.
-  ![ average number of installments](average_installment.png)
+  ![ average number of installments](average_installment.PNG)
 
 - **Total Payments:**
   - Calculated by counting the distinct payment IDs, providing a holistic view of payment transactions.
@@ -42,7 +42,7 @@ In the culmination of this data engineering project, we present insightful visua
     - average_shipping_cost : 182,566,730
 - *furniture_decor_category:**
     - average_shipping_cost : 172,749,300
-![Best Selling Based on Category](Best_Selling_Category.png)      
+![Best Selling Based on Category](Best_Selling_Category.PNG)      
     
 ### Total Order By year and Quarters
 
