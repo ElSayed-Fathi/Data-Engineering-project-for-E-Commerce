@@ -1,0 +1,3539 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20214.22.0108.1039                               -->
+<workbook locale='en_US' original-version='18.1' source-build='2021.4.3 (20214.22.0108.1039)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelRelationshipPerfOptions.true...ObjectModelRelationshipPerfOptions />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='User_Dim (RetailDataWarehouse)' inline='true' name='federated.0bnkg1l0kdaa6k10m6i7n0yin6h9' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='DESKTOP-RT8G23R' name='sqlserver.0ohtlr00kkjht01bzc2u40gb407b'>
+            <connection authentication='sspi' class='sqlserver' dbname='RetailDataWarehouse' odbc-native-protocol='yes' one-time-sql='' server='DESKTOP-RT8G23R' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='sqlserver.0ohtlr00kkjht01bzc2u40gb407b' name='Feedback_Dim' table='[dbo].[Feedback_Dim]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='sqlserver.0ohtlr00kkjht01bzc2u40gb407b' name='Sales_Fact' table='[dbo].[Sales_Fact]' type='table' />
+          <relation connection='sqlserver.0ohtlr00kkjht01bzc2u40gb407b' name='Feedback_Dim' table='[dbo].[Feedback_Dim]' type='table' />
+          <relation connection='sqlserver.0ohtlr00kkjht01bzc2u40gb407b' name='Order_Dim' table='[dbo].[Order_Dim]' type='table' />
+          <relation connection='sqlserver.0ohtlr00kkjht01bzc2u40gb407b' name='Payement_Dim' table='[dbo].[Payement_Dim]' type='table' />
+          <relation connection='sqlserver.0ohtlr00kkjht01bzc2u40gb407b' name='Product_Dim' table='[dbo].[Product_Dim]' type='table' />
+          <relation connection='sqlserver.0ohtlr00kkjht01bzc2u40gb407b' name='Seller_Dim' table='[dbo].[Seller_Dim]' type='table' />
+          <relation connection='sqlserver.0ohtlr00kkjht01bzc2u40gb407b' name='User_Dim' table='[dbo].[User_Dim]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Days_Between]' value='[Feedback_Dim].[Days_Between]' />
+          <map key='[delivered_date]' value='[Order_Dim].[delivered_date]' />
+          <map key='[estimated_time_delivery]' value='[Order_Dim].[estimated_time_delivery]' />
+          <map key='[feedback_answer_date]' value='[Feedback_Dim].[feedback_answer_date]' />
+          <map key='[feedback_id (Feedback_Dim)]' value='[Feedback_Dim].[feedback_id]' />
+          <map key='[feedback_id]' value='[Sales_Fact].[feedback_id]' />
+          <map key='[feedback_score]' value='[Feedback_Dim].[feedback_score]' />
+          <map key='[feedback_sent_date]' value='[Feedback_Dim].[feedback_sent_date]' />
+          <map key='[order_approved_date]' value='[Order_Dim].[order_approved_date]' />
+          <map key='[order_date]' value='[Order_Dim].[order_date]' />
+          <map key='[order_id (Order_Dim)]' value='[Order_Dim].[order_id]' />
+          <map key='[order_id]' value='[Sales_Fact].[order_id]' />
+          <map key='[order_status]' value='[Order_Dim].[order_status]' />
+          <map key='[payment_id (Payement_Dim)]' value='[Payement_Dim].[payment_id]' />
+          <map key='[payment_id]' value='[Sales_Fact].[payment_id]' />
+          <map key='[payment_installments]' value='[Payement_Dim].[payment_installments]' />
+          <map key='[payment_sequential]' value='[Payement_Dim].[payment_sequential]' />
+          <map key='[payment_type]' value='[Payement_Dim].[payment_type]' />
+          <map key='[payment_value]' value='[Payement_Dim].[payment_value]' />
+          <map key='[pickup_date]' value='[Order_Dim].[pickup_date]' />
+          <map key='[pickup_limit_date]' value='[Sales_Fact].[pickup_limit_date]' />
+          <map key='[price]' value='[Sales_Fact].[price]' />
+          <map key='[product_category]' value='[Product_Dim].[product_category]' />
+          <map key='[product_description_lenght]' value='[Product_Dim].[product_description_lenght]' />
+          <map key='[product_height_cm]' value='[Product_Dim].[product_height_cm]' />
+          <map key='[product_id (Product_Dim)]' value='[Product_Dim].[product_id]' />
+          <map key='[product_id]' value='[Sales_Fact].[product_id]' />
+          <map key='[product_length_cm]' value='[Product_Dim].[product_length_cm]' />
+          <map key='[product_name_lenght]' value='[Product_Dim].[product_name_lenght]' />
+          <map key='[product_photos_qty]' value='[Product_Dim].[product_photos_qty]' />
+          <map key='[product_weight_g]' value='[Product_Dim].[product_weight_g]' />
+          <map key='[product_width_cm]' value='[Product_Dim].[product_width_cm]' />
+          <map key='[seller_city]' value='[Seller_Dim].[seller_city]' />
+          <map key='[seller_id (Seller_Dim)]' value='[Seller_Dim].[seller_id]' />
+          <map key='[seller_id]' value='[Sales_Fact].[seller_id]' />
+          <map key='[seller_state]' value='[Seller_Dim].[seller_state]' />
+          <map key='[seller_zip_code]' value='[Seller_Dim].[seller_zip_code]' />
+          <map key='[shipping_cost]' value='[Sales_Fact].[shipping_cost]' />
+          <map key='[user_city]' value='[User_Dim].[user_city]' />
+          <map key='[user_id (User_Dim)]' value='[User_Dim].[user_id]' />
+          <map key='[user_id]' value='[Sales_Fact].[user_id]' />
+          <map key='[user_state]' value='[User_Dim].[user_state]' />
+          <map key='[user_zip_code]' value='[User_Dim].[user_zip_code]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>order_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[order_id]</local-name>
+            <parent-name>[Sales_Fact]</parent-name>
+            <remote-alias>order_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sales_Fact_AAB936A5F84C42EEB75F5C89FAA22789]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[user_id]</local-name>
+            <parent-name>[Sales_Fact]</parent-name>
+            <remote-alias>user_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sales_Fact_AAB936A5F84C42EEB75F5C89FAA22789]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[product_id]</local-name>
+            <parent-name>[Sales_Fact]</parent-name>
+            <remote-alias>product_id</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sales_Fact_AAB936A5F84C42EEB75F5C89FAA22789]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>feedback_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[feedback_id]</local-name>
+            <parent-name>[Sales_Fact]</parent-name>
+            <remote-alias>feedback_id</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sales_Fact_AAB936A5F84C42EEB75F5C89FAA22789]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seller_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[seller_id]</local-name>
+            <parent-name>[Sales_Fact]</parent-name>
+            <remote-alias>seller_id</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sales_Fact_AAB936A5F84C42EEB75F5C89FAA22789]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pickup_limit_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[pickup_limit_date]</local-name>
+            <parent-name>[Sales_Fact]</parent-name>
+            <remote-alias>pickup_limit_date</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sales_Fact_AAB936A5F84C42EEB75F5C89FAA22789]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[price]</local-name>
+            <parent-name>[Sales_Fact]</parent-name>
+            <remote-alias>price</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sales_Fact_AAB936A5F84C42EEB75F5C89FAA22789]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>shipping_cost</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[shipping_cost]</local-name>
+            <parent-name>[Sales_Fact]</parent-name>
+            <remote-alias>shipping_cost</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sales_Fact_AAB936A5F84C42EEB75F5C89FAA22789]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>payment_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[payment_id]</local-name>
+            <parent-name>[Sales_Fact]</parent-name>
+            <remote-alias>payment_id</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sales_Fact_AAB936A5F84C42EEB75F5C89FAA22789]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>feedback_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[feedback_id (Feedback_Dim)]</local-name>
+            <parent-name>[Feedback_Dim]</parent-name>
+            <remote-alias>feedback_id</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>false</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Feedback_Dim_47AE6692ABD74833BC12B81C1313F871]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>feedback_score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[feedback_score]</local-name>
+            <parent-name>[Feedback_Dim]</parent-name>
+            <remote-alias>feedback_score</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Feedback_Dim_47AE6692ABD74833BC12B81C1313F871]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>feedback_sent_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[feedback_sent_date]</local-name>
+            <parent-name>[Feedback_Dim]</parent-name>
+            <remote-alias>feedback_sent_date</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Feedback_Dim_47AE6692ABD74833BC12B81C1313F871]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>feedback_answer_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[feedback_answer_date]</local-name>
+            <parent-name>[Feedback_Dim]</parent-name>
+            <remote-alias>feedback_answer_date</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Feedback_Dim_47AE6692ABD74833BC12B81C1313F871]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Days_Between</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Days_Between]</local-name>
+            <parent-name>[Feedback_Dim]</parent-name>
+            <remote-alias>Days_Between</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Feedback_Dim_47AE6692ABD74833BC12B81C1313F871]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[order_id (Order_Dim)]</local-name>
+            <parent-name>[Order_Dim]</parent-name>
+            <remote-alias>order_id</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>false</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[order_status]</local-name>
+            <parent-name>[Order_Dim]</parent-name>
+            <remote-alias>order_status</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[order_date]</local-name>
+            <parent-name>[Order_Dim]</parent-name>
+            <remote-alias>order_date</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>order_approved_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[order_approved_date]</local-name>
+            <parent-name>[Order_Dim]</parent-name>
+            <remote-alias>order_approved_date</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pickup_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[pickup_date]</local-name>
+            <parent-name>[Order_Dim]</parent-name>
+            <remote-alias>pickup_date</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>delivered_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[delivered_date]</local-name>
+            <parent-name>[Order_Dim]</parent-name>
+            <remote-alias>delivered_date</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>estimated_time_delivery</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[estimated_time_delivery]</local-name>
+            <parent-name>[Order_Dim]</parent-name>
+            <remote-alias>estimated_time_delivery</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>payment_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[payment_id (Payement_Dim)]</local-name>
+            <parent-name>[Payement_Dim]</parent-name>
+            <remote-alias>payment_id</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Payement_Dim_8AD62851F39E4B768F27E879D0366CF3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>payment_sequential</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[payment_sequential]</local-name>
+            <parent-name>[Payement_Dim]</parent-name>
+            <remote-alias>payment_sequential</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Payement_Dim_8AD62851F39E4B768F27E879D0366CF3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>payment_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[payment_type]</local-name>
+            <parent-name>[Payement_Dim]</parent-name>
+            <remote-alias>payment_type</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Payement_Dim_8AD62851F39E4B768F27E879D0366CF3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>payment_installments</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[payment_installments]</local-name>
+            <parent-name>[Payement_Dim]</parent-name>
+            <remote-alias>payment_installments</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Payement_Dim_8AD62851F39E4B768F27E879D0366CF3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>payment_value</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[payment_value]</local-name>
+            <parent-name>[Payement_Dim]</parent-name>
+            <remote-alias>payment_value</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Payement_Dim_8AD62851F39E4B768F27E879D0366CF3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[product_id (Product_Dim)]</local-name>
+            <parent-name>[Product_Dim]</parent-name>
+            <remote-alias>product_id</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>false</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Product_Dim_2E69B8A0A8E04A7D8072355FD48FDB61]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[product_category]</local-name>
+            <parent-name>[Product_Dim]</parent-name>
+            <remote-alias>product_category</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Product_Dim_2E69B8A0A8E04A7D8072355FD48FDB61]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_name_lenght</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[product_name_lenght]</local-name>
+            <parent-name>[Product_Dim]</parent-name>
+            <remote-alias>product_name_lenght</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Product_Dim_2E69B8A0A8E04A7D8072355FD48FDB61]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_description_lenght</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[product_description_lenght]</local-name>
+            <parent-name>[Product_Dim]</parent-name>
+            <remote-alias>product_description_lenght</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Product_Dim_2E69B8A0A8E04A7D8072355FD48FDB61]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_photos_qty</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[product_photos_qty]</local-name>
+            <parent-name>[Product_Dim]</parent-name>
+            <remote-alias>product_photos_qty</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Product_Dim_2E69B8A0A8E04A7D8072355FD48FDB61]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_weight_g</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[product_weight_g]</local-name>
+            <parent-name>[Product_Dim]</parent-name>
+            <remote-alias>product_weight_g</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Product_Dim_2E69B8A0A8E04A7D8072355FD48FDB61]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_length_cm</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[product_length_cm]</local-name>
+            <parent-name>[Product_Dim]</parent-name>
+            <remote-alias>product_length_cm</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Product_Dim_2E69B8A0A8E04A7D8072355FD48FDB61]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_height_cm</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[product_height_cm]</local-name>
+            <parent-name>[Product_Dim]</parent-name>
+            <remote-alias>product_height_cm</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Product_Dim_2E69B8A0A8E04A7D8072355FD48FDB61]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_width_cm</remote-name>
+            <remote-type>4</remote-type>
+            <local-name>[product_width_cm]</local-name>
+            <parent-name>[Product_Dim]</parent-name>
+            <remote-alias>product_width_cm</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>6</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_REAL&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_FLOAT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Product_Dim_2E69B8A0A8E04A7D8072355FD48FDB61]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seller_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[seller_id (Seller_Dim)]</local-name>
+            <parent-name>[Seller_Dim]</parent-name>
+            <remote-alias>seller_id</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>false</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Seller_Dim_15A6F0183CA8413495A5A6392BEE34E5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seller_zip_code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[seller_zip_code]</local-name>
+            <parent-name>[Seller_Dim]</parent-name>
+            <remote-alias>seller_zip_code</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Seller_Dim_15A6F0183CA8413495A5A6392BEE34E5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seller_city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[seller_city]</local-name>
+            <parent-name>[Seller_Dim]</parent-name>
+            <remote-alias>seller_city</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Seller_Dim_15A6F0183CA8413495A5A6392BEE34E5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seller_state</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[seller_state]</local-name>
+            <parent-name>[Seller_Dim]</parent-name>
+            <remote-alias>seller_state</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Seller_Dim_15A6F0183CA8413495A5A6392BEE34E5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[user_id (User_Dim)]</local-name>
+            <parent-name>[User_Dim]</parent-name>
+            <remote-alias>user_id</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>false</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[User_Dim_E2E5E9CA024D4F8988A0D3339B48ED2E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_zip_code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[user_zip_code]</local-name>
+            <parent-name>[User_Dim]</parent-name>
+            <remote-alias>user_zip_code</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[User_Dim_E2E5E9CA024D4F8988A0D3339B48ED2E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[user_city]</local-name>
+            <parent-name>[User_Dim]</parent-name>
+            <remote-alias>user_city</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[User_Dim_E2E5E9CA024D4F8988A0D3339B48ED2E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>user_state</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[user_state]</local-name>
+            <parent-name>[User_Dim]</parent-name>
+            <remote-alias>user_state</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[User_Dim_E2E5E9CA024D4F8988A0D3339B48ED2E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Calculation1' datatype='real' name='[Calculation_1158551047857741825]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([order_id])/10000' />
+      </column>
+      <column caption='Days Between' datatype='integer' name='[Days_Between]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Feedback_Dim' datatype='table' name='[__tableau_internal_object_id__].[Feedback_Dim_47AE6692ABD74833BC12B81C1313F871]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Order_Dim' datatype='table' name='[__tableau_internal_object_id__].[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Payement_Dim' datatype='table' name='[__tableau_internal_object_id__].[Payement_Dim_8AD62851F39E4B768F27E879D0366CF3]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Product_Dim' datatype='table' name='[__tableau_internal_object_id__].[Product_Dim_2E69B8A0A8E04A7D8072355FD48FDB61]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Sales_Fact' datatype='table' name='[__tableau_internal_object_id__].[Sales_Fact_AAB936A5F84C42EEB75F5C89FAA22789]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Seller_Dim' datatype='table' name='[__tableau_internal_object_id__].[Seller_Dim_15A6F0183CA8413495A5A6392BEE34E5]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='User_Dim' datatype='table' name='[__tableau_internal_object_id__].[User_Dim_E2E5E9CA024D4F8988A0D3339B48ED2E]' role='measure' type='quantitative' />
+      <column caption='Delivered Date' datatype='datetime' name='[delivered_date]' role='dimension' type='ordinal' />
+      <column caption='Estimated Time Delivery' datatype='datetime' name='[estimated_time_delivery]' role='dimension' type='ordinal' />
+      <column caption='Feedback Answer Date' datatype='datetime' name='[feedback_answer_date]' role='dimension' type='ordinal' />
+      <column caption='feedback id (Feedback Dim)' datatype='string' name='[feedback_id (Feedback_Dim)]' role='dimension' type='nominal' />
+      <column caption='Feedback Id' datatype='string' name='[feedback_id]' role='dimension' type='nominal' />
+      <column caption='Feedback Score' datatype='integer' name='[feedback_score]' role='measure' type='quantitative' />
+      <column caption='Feedback Sent Date' datatype='datetime' name='[feedback_sent_date]' role='dimension' type='ordinal' />
+      <column caption='Order Approved Date' datatype='datetime' name='[order_approved_date]' role='dimension' type='ordinal' />
+      <column caption='Order Date' datatype='datetime' name='[order_date]' role='dimension' type='ordinal' />
+      <column caption='order id (Order Dim)' datatype='string' name='[order_id (Order_Dim)]' role='dimension' type='nominal' />
+      <column caption='Order Id' datatype='string' name='[order_id]' role='dimension' type='nominal' />
+      <column caption='Order Status' datatype='string' name='[order_status]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='payment id (Payement Dim)' datatype='integer' name='[payment_id (Payement_Dim)]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Payment Id' datatype='integer' name='[payment_id]' role='dimension' type='ordinal' />
+      <column caption='Payment Installments' datatype='integer' name='[payment_installments]' role='measure' type='quantitative' />
+      <column caption='Payment Sequential' datatype='integer' name='[payment_sequential]' role='measure' type='quantitative' />
+      <column caption='Payment Type' datatype='string' name='[payment_type]' role='dimension' type='nominal' />
+      <column caption='Payment Value' datatype='real' name='[payment_value]' role='measure' type='quantitative' />
+      <column caption='Pickup Date' datatype='datetime' name='[pickup_date]' role='dimension' type='ordinal' />
+      <column caption='Pickup Limit Date' datatype='datetime' name='[pickup_limit_date]' role='dimension' type='ordinal' />
+      <column caption='Price' datatype='real' name='[price]' role='measure' type='quantitative' />
+      <column caption='Product Category' datatype='string' name='[product_category]' role='dimension' type='nominal' />
+      <column caption='Product Description Lenght' datatype='real' name='[product_description_lenght]' role='measure' type='quantitative' />
+      <column caption='Product Height Cm' datatype='real' name='[product_height_cm]' role='measure' type='quantitative' />
+      <column caption='product id (Product Dim)' datatype='string' name='[product_id (Product_Dim)]' role='dimension' type='nominal' />
+      <column caption='Product Id' datatype='string' name='[product_id]' role='dimension' type='nominal' />
+      <column caption='Product Length Cm' datatype='real' name='[product_length_cm]' role='measure' type='quantitative' />
+      <column caption='Product Name Lenght' datatype='real' name='[product_name_lenght]' role='measure' type='quantitative' />
+      <column caption='Product Photos Qty' datatype='real' name='[product_photos_qty]' role='measure' type='quantitative' />
+      <column caption='Product Weight G' datatype='real' name='[product_weight_g]' role='measure' type='quantitative' />
+      <column caption='Product Width Cm' datatype='real' name='[product_width_cm]' role='measure' type='quantitative' />
+      <column caption='Seller City' datatype='string' name='[seller_city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='seller id (Seller Dim)' datatype='string' name='[seller_id (Seller_Dim)]' role='dimension' type='nominal' />
+      <column caption='Seller Id' datatype='string' name='[seller_id]' role='dimension' type='nominal' />
+      <column caption='Seller State' datatype='string' name='[seller_state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column aggregation='Sum' caption='Seller Zip Code' datatype='integer' default-format='*00000' name='[seller_zip_code]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column caption='Shipping Cost' datatype='real' name='[shipping_cost]' role='measure' type='quantitative' />
+      <column caption='User City' datatype='string' name='[user_city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='user id (User Dim)' datatype='string' name='[user_id (User_Dim)]' role='dimension' type='nominal' />
+      <column caption='User Id' datatype='string' name='[user_id]' role='dimension' type='nominal' />
+      <column caption='User State' datatype='string' name='[user_state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column aggregation='Sum' caption='User Zip Code' datatype='integer' default-format='*00000' name='[user_zip_code]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column-instance column='[order_status]' derivation='None' name='[none:order_status:nk]' pivot='key' type='nominal' />
+      <column-instance column='[payment_type]' derivation='None' name='[none:payment_type:nk]' pivot='key' type='nominal' />
+      <column-instance column='[seller_city]' derivation='None' name='[none:seller_city:nk]' pivot='key' type='nominal' />
+      <column-instance column='[seller_state]' derivation='None' name='[none:seller_state:nk]' pivot='key' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:seller_state:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;JAMBI&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;SULAWESI SELATAN&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;MALUKU&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;BENGKULU&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;PAPUA&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;KALIMANTAN BARAT&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;SUMATERA BARAT&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;JAWA BARAT&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;SULAWESI TENGAH&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;DI YOGYAKARTA&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;PAPUA BARAT&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;KEPULAUAN RIAU&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;ACEH&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;MALUKU UTARA&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;KALIMANTAN UTARA&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;DKI JAKARTA&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;RIAU&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;KALIMANTAN SELATAN&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;SUMATERA SELATAN&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;KALIMANTAN TENGAH&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;SUMATERA UTARA&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;KEPULAUAN BANGKA BELITUNG&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;LAMPUNG&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;JAWA TENGAH&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;SULAWESI TENGGARA&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;GORONTALO&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;SULAWESI BARAT&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;BALI&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;NUSA TENGGARA BARAT&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;KALIMANTAN TIMUR&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;JAWA TIMUR&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;SULAWESI UTARA&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;BANTEN&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;NUSA TENGGARA TIMUR&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:seller_city:nk]' palette='jewel_bright_10_0' type='palette'>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN ACEH TIMUR&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN BANGGAI&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN BANJARNEGARA&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN BATANG HARI&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN BERAU&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN BOLAANG MONGONDOW UTARA&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN BUTON&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN DEIYAI&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN GORONTALO&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN HUMBANG HASUNDUTAN&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN JOMBANG&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN KAUR&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN KEPULAUAN SELAYAR&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN KONAWE UTARA&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN KUTAI BARAT&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN LAMPUNG SELATAN&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN LUMAJANG&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN MALANG&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN MAPPI&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN MOJOKERTO&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN NABIRE&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN OGAN KOMERING ULU SELATAN&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN PANGKAJENE DAN KEPULAUAN&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN PEMALANG&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN POSO&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN REMBANG&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN SAROLANGUN&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN SIJUNJUNG&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN SORONG&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN SUMENEP&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN TANAH LAUT&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN TELUK BINTUNI&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KABUPATEN TULUNGAGUNG&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KOTA B A T A M&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KOTA BEKASI&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KOTA CILEGON&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KOTA JAKARTA SELATAN&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KOTA LANGSA&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KOTA PADANG&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KOTA PAREPARE&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KOTA SABANG&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KOTA SORONG&quot;</bucket>
+            </map>
+            <map to='#5fbb68'>
+              <bucket>&quot;KOTA TASIKMALAYA&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN ACEH UTARA&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN BANGGAI KEPULAUAN&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN BANTUL&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN BATU BARA&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN BIAK NUMFOR&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN BONDOWOSO&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN BUTON SELATAN&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN DELI SERDANG&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN GOWA&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN INDRAGIRI HILIR&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN KAIMANA&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN KAYONG UTARA&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN KEPULAUAN SERIBU&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN KOTAWARINGIN BARAT&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN KUTAI KARTANEGARA&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN LAMPUNG TENGAH&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN LUWU&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN MALINAU&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN MAROS&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN MOROWALI&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN NAGEKEO&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN OGAN KOMERING ULU TIMUR&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN PANIAI&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN PENAJAM PASER UTARA&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN PROBOLINGGO&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN ROKAN HILIR&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN SEKADAU&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN SIKKA&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN SORONG SELATAN&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN SUPIORI&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN TANGERANG&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN TEMANGGUNG&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KABUPATEN WAJO&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KOTA BALIKPAPAN&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KOTA BENGKULU&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KOTA CIMAHI&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KOTA JAKARTA TIMUR&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KOTA LUBUKLINGGAU&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KOTA PADANG PANJANG&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KOTA PARIAMAN&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KOTA SALATIGA&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KOTA SUKABUMI&quot;</bucket>
+            </map>
+            <map to='#64cdcc'>
+              <bucket>&quot;KOTA TEBING TINGGI&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN AGAM&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN BANGGAI LAUT&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN BANYU ASIN&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN BEKASI&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN BIMA&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN BONE&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN BUTON TENGAH&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN DEMAK&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN GRESIK&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN INDRAGIRI HULU&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN KAMPAR&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN KEBUMEN&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN KEPULAUAN YAPEN&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN KOTAWARINGIN TIMUR&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN LABUHAN BATU&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN LAMPUNG TIMUR&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN LUWU TIMUR&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN MALUKU TENGGARA BARAT&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN MELAWI&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN MUARA ENIM&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN NATUNA&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN PACITAN&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN PASAMAN&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN PENUKAL ABAB LEMATANG ILIR&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN PULANG PISAU&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN ROTE NDAO&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN SELUMA&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN SIMALUNGUN&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN SRAGEN&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN TABALONG&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN TANJUNG JABUNG BARAT&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN TIMOR TENGAH UTARA&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KABUPATEN WAKATOBI&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KOTA BANDA ACEH&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KOTA BIMA&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KOTA CIREBON&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KOTA JAKARTA UTARA&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KOTA MADIUN&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KOTA PADANGSIDIMPUAN&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KOTA PASURUAN&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KOTA SAMARINDA&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KOTA SUNGAI PENUH&quot;</bucket>
+            </map>
+            <map to='#91dcea'>
+              <bucket>&quot;KOTA TEGAL&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN ASAHAN&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN BANGKA&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN BANYUMAS&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN BELITUNG TIMUR&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN BINTAN&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN BONE BOLANGO&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN BUTON UTARA&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN DHARMASRAYA&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN GROBOGAN&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN INDRAMAYU&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN KAPUAS&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN KEDIRI&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN KERINCI&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN KUANTAN SINGINGI&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN LABUHAN BATU SELATAN&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN LAMPUNG UTARA&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN MADIUN&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN MAMASA&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN MESUJI&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN MUARO JAMBI&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN NGANJUK&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN PADANG LAWAS&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN PASAMAN BARAT&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN PESISIR BARAT&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN PULAU MOROTAI&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN S I A K&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN SEMARANG&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN SIMEULUE&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN SUBANG&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN TABANAN&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN TAPANULI SELATAN&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN TOBA SAMOSIR&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KABUPATEN WAY KANAN&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KOTA BANDAR LAMPUNG&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KOTA BINJAI&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KOTA DENPASAR&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KOTA JAMBI&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KOTA MAGELANG&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KOTA PAGAR ALAM&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KOTA PAYAKUMBUH&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KOTA SAWAH LUNTO&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KOTA SURABAYA&quot;</bucket>
+            </map>
+            <map to='#a4a4d5'>
+              <bucket>&quot;KOTA TERNATE&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN ASMAT&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN BANGKA BARAT&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN BANYUWANGI&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN BENGKALIS&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN BLITAR&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN BOVEN DIGOEL&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN CIAMIS&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN ENDE&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN HALMAHERA TENGAH&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN INTAN JAYA&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN KAPUAS HULU&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN KEEROM&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN KLATEN&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN KUBU RAYA&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN LABUHAN BATU UTARA&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN LANDAK&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN MAGELANG&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN MAMBERAMO TENGAH&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN MIMIKA&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN MUKOMUKO&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN NIAS BARAT&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN PADANG PARIAMAN&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN PASER&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN PESISIR SELATAN&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN PULAU TALIABU&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN SABU RAIJUA&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN SERANG&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN SINJAI&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN SUKABUMI&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN TAKALAR&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN TAPANULI TENGAH&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN TOJO UNA-UNA&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KABUPATEN WONOGIRI&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KOTA BANDUNG&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KOTA BITUNG&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KOTA DEPOK&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KOTA JAYAPURA&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KOTA MAKASSAR&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KOTA PALANGKA RAYA&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KOTA PEKALONGAN&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KOTA SEMARANG&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KOTA SURAKARTA&quot;</bucket>
+            </map>
+            <map to='#bbc9e5'>
+              <bucket>&quot;KOTA TIDORE KEPULAUAN&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN ACEH BARAT&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN BADUNG&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN BANGKA SELATAN&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN BARITO SELATAN&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN BENGKAYANG&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN BLORA&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN BOYOLALI&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN CIANJUR&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN ENREKANG&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN HALMAHERA TIMUR&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN JEMBER&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN KARANGANYAR&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN KENDAL&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN KLUNGKUNG&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN KUDUS&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN LAHAT&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN LANGKAT&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN MAGETAN&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN MAMUJU&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN MINAHASA&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN MUNA&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN NIAS SELATAN&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN PAKPAK BHARAT&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN PASURUAN&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN PINRANG&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN PUNCAK&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN SAMBAS&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN SERDANG BEDAGAI&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN SINTANG&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN SUKOHARJO&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN TANA TIDUNG&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN TAPIN&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN TOLI-TOLI&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KABUPATEN WONOSOBO&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KOTA BANJAR&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KOTA BLITAR&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KOTA GORONTALO&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KOTA KEDIRI&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KOTA MALANG&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KOTA PALEMBANG&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KOTA PEKANBARU&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KOTA SERANG&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KOTA TANGERANG&quot;</bucket>
+            </map>
+            <map to='#eb1e2c'>
+              <bucket>&quot;KOTA TOMOHON&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN ACEH TENGAH&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN BANDUNG&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN BANGKALAN&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN BARRU&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN BENGKULU TENGAH&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN BOJONEGORO&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN BULUKUMBA&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN CIREBON&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN GARUT&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN HULU SUNGAI TENGAH&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN JENEPONTO&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN KARIMUN&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN KEPULAUAN MERANTI&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN KONAWE&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN KUNINGAN&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN LAMONGAN&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN LEBAK&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN MAJENE&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN MANGGARAI TIMUR&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN MINAHASA TENGGARA&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN MUSI BANYUASIN&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN OGAN ILIR&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN PANDEGLANG&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN PEKALONGAN&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN POLEWALI MANDAR&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN PURWAKARTA&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN SANGGAU&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN SIDENRENG RAPPANG&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN SLEMAN&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN SUMBA TENGAH&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN TANAH BUMBU&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN TEBO&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN TUBAN&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KABUPATEN YALIMO&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KOTA BANJARMASIN&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KOTA BONTANG&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KOTA JAKARTA BARAT&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KOTA KOTAMOBAGU&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KOTA MEDAN&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KOTA PALU&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KOTA PONTIANAK&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KOTA SINGKAWANG&quot;</bucket>
+            </map>
+            <map to='#f9a729'>
+              <bucket>&quot;KOTA TANJUNG PINANG&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN ACEH TENGGARA&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN BANDUNG BARAT&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN BANGLI&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN BATANG&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN BENGKULU UTARA&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN BOLAANG MONGONDOW TIMUR&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN BUNGO&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN DAIRI&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN GAYO LUES&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN HULU SUNGAI UTARA&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN JEPARA&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN KARO&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN KEPULAUAN SANGIHE&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN KONAWE SELATAN&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN KUPANG&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN LAMPUNG BARAT&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN LOMBOK UTARA&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN MALAKA&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN MANOKWARI&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN MINAHASA UTARA&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN MUSI RAWAS UTARA&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN OGAN KOMERING ILIR&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN PANGANDARAN&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN PELALAWAN&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN PONOROGO&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN REJANG LEBONG&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN SARMI&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN SIDOARJO&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN SOPPENG&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN SUMEDANG&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN TANAH DATAR&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN TEGAL&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KABUPATEN TULANG BAWANG BARAT&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KOTA AMBON&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KOTA BATU&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KOTA BUKITTINGGI&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KOTA JAKARTA PUSAT&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KOTA KUPANG&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KOTA MOJOKERTO&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KOTA PANGKAL PINANG&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KOTA PRABUMULIH&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KOTA SOLOK&quot;</bucket>
+            </map>
+            <map to='#f9d23c'>
+              <bucket>&quot;KOTA TARAKAN&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN ACEH JAYA&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN BALANGAN&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN BANGKA TENGAH&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN BARITO UTARA&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN BENGKULU SELATAN&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN BOGOR&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN BREBES&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN CILACAP&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN FLORES TIMUR&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN HULU SUNGAI SELATAN&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN JEMBRANA&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN KARAWANG&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN KEPULAUAN ANAMBAS&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN KOLAKA&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN KULON PROGO&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN LAMANDAU&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN LANNY JAYA&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN MAJALENGKA&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN MANDAILING NATAL&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN MINAHASA SELATAN&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN MURUNG RAYA&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN NUNUKAN&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN PAMEKASAN&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN PATI&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN POHUWATO&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN PURBALINGGA&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN SAMPANG&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN SIAU TAGULANDANG BIARO&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN SITUBONDO&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN SUMBA BARAT&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN TANA TORAJA&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN TASIKMALAYA&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN TRENGGALEK&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KABUPATEN YAHUKIMO&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KOTA BANJAR BARU&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KOTA BOGOR&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KOTA GUNUNGSITOLI&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KOTA KENDARI&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KOTA MANADO&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KOTA PALOPO&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KOTA PEMATANG SIANTAR&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KOTA SIBOLGA&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KOTA TANGERANG SELATAN&quot;</bucket>
+            </map>
+            <map to='#fd6f30'>
+              <bucket>&quot;KOTA YOGYAKARTA&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:order_status:nk]' palette='tableau-20' type='palette'>
+            <map to='#1f77b4'>
+              <bucket>&quot;approved&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;invoiced&quot;</bucket>
+            </map>
+            <map to='#98df8a'>
+              <bucket>&quot;processing&quot;</bucket>
+            </map>
+            <map to='#aec7e8'>
+              <bucket>&quot;canceled&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;shipped&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;created&quot;</bucket>
+            </map>
+            <map to='#ff9896'>
+              <bucket>&quot;unavailable&quot;</bucket>
+            </map>
+            <map to='#ffbb78'>
+              <bucket>&quot;delivered&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:payment_type:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;blipay&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;voucher&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;not_defined&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;debit_card&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;credit_card&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <date-options start-of-week='saturday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Feedback_Dim' id='Feedback_Dim_47AE6692ABD74833BC12B81C1313F871'>
+            <properties context=''>
+              <relation connection='sqlserver.0ohtlr00kkjht01bzc2u40gb407b' name='Feedback_Dim' table='[dbo].[Feedback_Dim]' type='table' />
+            </properties>
+          </object>
+          <object caption='Order_Dim' id='Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B'>
+            <properties context=''>
+              <relation connection='sqlserver.0ohtlr00kkjht01bzc2u40gb407b' name='Order_Dim' table='[dbo].[Order_Dim]' type='table' />
+            </properties>
+          </object>
+          <object caption='Payement_Dim' id='Payement_Dim_8AD62851F39E4B768F27E879D0366CF3'>
+            <properties context=''>
+              <relation connection='sqlserver.0ohtlr00kkjht01bzc2u40gb407b' name='Payement_Dim' table='[dbo].[Payement_Dim]' type='table' />
+            </properties>
+          </object>
+          <object caption='Product_Dim' id='Product_Dim_2E69B8A0A8E04A7D8072355FD48FDB61'>
+            <properties context=''>
+              <relation connection='sqlserver.0ohtlr00kkjht01bzc2u40gb407b' name='Product_Dim' table='[dbo].[Product_Dim]' type='table' />
+            </properties>
+          </object>
+          <object caption='Sales_Fact' id='Sales_Fact_AAB936A5F84C42EEB75F5C89FAA22789'>
+            <properties context=''>
+              <relation connection='sqlserver.0ohtlr00kkjht01bzc2u40gb407b' name='Sales_Fact' table='[dbo].[Sales_Fact]' type='table' />
+            </properties>
+          </object>
+          <object caption='Seller_Dim' id='Seller_Dim_15A6F0183CA8413495A5A6392BEE34E5'>
+            <properties context=''>
+              <relation connection='sqlserver.0ohtlr00kkjht01bzc2u40gb407b' name='Seller_Dim' table='[dbo].[Seller_Dim]' type='table' />
+            </properties>
+          </object>
+          <object caption='User_Dim' id='User_Dim_E2E5E9CA024D4F8988A0D3339B48ED2E'>
+            <properties context=''>
+              <relation connection='sqlserver.0ohtlr00kkjht01bzc2u40gb407b' name='User_Dim' table='[dbo].[User_Dim]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[feedback_id]' />
+              <expression op='[feedback_id (Feedback_Dim)]' />
+            </expression>
+            <first-end-point object-id='Sales_Fact_AAB936A5F84C42EEB75F5C89FAA22789' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='Feedback_Dim_47AE6692ABD74833BC12B81C1313F871' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[order_id]' />
+              <expression op='[order_id (Order_Dim)]' />
+            </expression>
+            <first-end-point object-id='Sales_Fact_AAB936A5F84C42EEB75F5C89FAA22789' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[payment_id]' />
+              <expression op='[payment_id (Payement_Dim)]' />
+            </expression>
+            <first-end-point object-id='Sales_Fact_AAB936A5F84C42EEB75F5C89FAA22789' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='Payement_Dim_8AD62851F39E4B768F27E879D0366CF3' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[product_id]' />
+              <expression op='[product_id (Product_Dim)]' />
+            </expression>
+            <first-end-point object-id='Sales_Fact_AAB936A5F84C42EEB75F5C89FAA22789' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='Product_Dim_2E69B8A0A8E04A7D8072355FD48FDB61' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[seller_id]' />
+              <expression op='[seller_id (Seller_Dim)]' />
+            </expression>
+            <first-end-point object-id='Sales_Fact_AAB936A5F84C42EEB75F5C89FAA22789' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='Seller_Dim_15A6F0183CA8413495A5A6392BEE34E5' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[user_id]' />
+              <expression op='[user_id (User_Dim)]' />
+            </expression>
+            <first-end-point object-id='Sales_Fact_AAB936A5F84C42EEB75F5C89FAA22789' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='User_Dim_E2E5E9CA024D4F8988A0D3339B48ED2E' unique-key='true' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='User_Dim (RetailDataWarehouse)' name='federated.0bnkg1l0kdaa6k10m6i7n0yin6h9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0bnkg1l0kdaa6k10m6i7n0yin6h9'>
+            <_.fcp.ObjectModelTableType.true...column caption='Product_Dim' datatype='table' name='[__tableau_internal_object_id__].[Product_Dim_2E69B8A0A8E04A7D8072355FD48FDB61]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Product_Dim_2E69B8A0A8E04A7D8072355FD48FDB61]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Product_Dim_2E69B8A0A8E04A7D8072355FD48FDB61:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[product_category]' derivation='None' name='[none:product_category:nk]' pivot='key' type='nominal' />
+            <column caption='Product Category' datatype='string' name='[product_category]' role='dimension' type='nominal' />
+            <column caption='Product Description Lenght' datatype='real' name='[product_description_lenght]' role='measure' type='quantitative' />
+            <column caption='Product Height Cm' datatype='real' name='[product_height_cm]' role='measure' type='quantitative' />
+            <column caption='Product Length Cm' datatype='real' name='[product_length_cm]' role='measure' type='quantitative' />
+            <column caption='Product Name Lenght' datatype='real' name='[product_name_lenght]' role='measure' type='quantitative' />
+            <column caption='Product Photos Qty' datatype='real' name='[product_photos_qty]' role='measure' type='quantitative' />
+            <column caption='Product Weight G' datatype='real' name='[product_weight_g]' role='measure' type='quantitative' />
+            <column caption='Product Width Cm' datatype='real' name='[product_width_cm]' role='measure' type='quantitative' />
+            <column-instance column='[product_description_lenght]' derivation='Sum' name='[sum:product_description_lenght:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[product_height_cm]' derivation='Sum' name='[sum:product_height_cm:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[product_length_cm]' derivation='Sum' name='[sum:product_length_cm:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[product_name_lenght]' derivation='Sum' name='[sum:product_name_lenght:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[product_photos_qty]' derivation='Sum' name='[sum:product_photos_qty:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[product_weight_g]' derivation='Sum' name='[sum:product_weight_g:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[product_width_cm]' derivation='Sum' name='[sum:product_width_cm:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.false...column caption='Product_Dim' datatype='integer' name='[__tableau_internal_object_id__].[Product_Dim_2E69B8A0A8E04A7D8072355FD48FDB61]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <size column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[sum:product_photos_qty:qk]' />
+              <lod column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[sum:product_description_lenght:qk]' />
+              <lod column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[sum:product_height_cm:qk]' />
+              <lod column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[sum:product_length_cm:qk]' />
+              <lod column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[sum:product_name_lenght:qk]' />
+              <lod column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[sum:product_weight_g:qk]' />
+              <lod column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[sum:product_width_cm:qk]' />
+              <lod column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Product_Dim_2E69B8A0A8E04A7D8072355FD48FDB61:qk]' />
+              <text column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[none:product_category:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B04E90DE-40A0-49B4-8B48-AD9B89FDE05A}' />
+    </worksheet>
+    <worksheet name='Sheet 10'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='User_Dim (RetailDataWarehouse)' name='federated.0bnkg1l0kdaa6k10m6i7n0yin6h9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0bnkg1l0kdaa6k10m6i7n0yin6h9'>
+            <_.fcp.ObjectModelTableType.true...column caption='Order_Dim' datatype='table' name='[__tableau_internal_object_id__].[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[payment_type]' derivation='None' name='[none:payment_type:nk]' pivot='key' type='nominal' />
+            <column caption='Payment Type' datatype='string' name='[payment_type]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='Order_Dim' datatype='integer' name='[__tableau_internal_object_id__].[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' field='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' value='center' />
+            <format attr='color' field='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' value='#000000' />
+            <format attr='font-weight' field='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' value='bold' />
+            <format attr='font-size' field='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' value='11' />
+            <format attr='text-format' field='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' value='*0%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[none:payment_type:nk]' />
+              <wedge-size column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' />
+              <size column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' />
+              <lod column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[none:payment_type:nk]' />
+              <text column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{F1BA6DFE-E33A-43BD-9F35-586D332E95F2}' />
+    </worksheet>
+    <worksheet name='Sheet 11'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='18'>Number of orders based on Payment Type</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='User_Dim (RetailDataWarehouse)' name='federated.0bnkg1l0kdaa6k10m6i7n0yin6h9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0bnkg1l0kdaa6k10m6i7n0yin6h9'>
+            <_.fcp.ObjectModelTableType.true...column caption='Order_Dim' datatype='table' name='[__tableau_internal_object_id__].[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[payment_type]' derivation='None' name='[none:payment_type:nk]' pivot='key' type='nominal' />
+            <column caption='Payment Type' datatype='string' name='[payment_type]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='Order_Dim' datatype='integer' name='[__tableau_internal_object_id__].[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[none:payment_type:nk]'>
+            <groupfilter from='&quot;blipay&quot;' function='range' level='[none:payment_type:nk]' to='&quot;voucher&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[none:payment_type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[none:payment_type:nk]' />
+              <wedge-size column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' />
+              <size column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' />
+              <text column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{E4C9C787-5904-41EA-8AC2-D7658BE1109F}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Best Payment Method</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='User_Dim (RetailDataWarehouse)' name='federated.0bnkg1l0kdaa6k10m6i7n0yin6h9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0bnkg1l0kdaa6k10m6i7n0yin6h9'>
+            <_.fcp.ObjectModelTableType.true...column caption='Payement_Dim' datatype='table' name='[__tableau_internal_object_id__].[Payement_Dim_8AD62851F39E4B768F27E879D0366CF3]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Payement_Dim_8AD62851F39E4B768F27E879D0366CF3]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Payement_Dim_8AD62851F39E4B768F27E879D0366CF3:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[payment_value]' derivation='Count' name='[cnt:payment_value:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[payment_type]' derivation='None' name='[none:payment_type:nk]' pivot='key' type='nominal' />
+            <column caption='Payment Type' datatype='string' name='[payment_type]' role='dimension' type='nominal' />
+            <column caption='Payment Value' datatype='real' name='[payment_value]' role='measure' type='quantitative' />
+            <_.fcp.ObjectModelTableType.false...column caption='Payement_Dim' datatype='integer' name='[__tableau_internal_object_id__].[Payement_Dim_8AD62851F39E4B768F27E879D0366CF3]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[none:payment_type:nk]' kind='hide'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:payment_type:nk]' />
+              <groupfilter function='member' level='[none:payment_type:nk]' member='&quot;not_defined&quot;' />
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[none:payment_type:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[cnt:payment_value:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[cnt:payment_value:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='color' value='#000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[none:payment_type:nk]' value='120' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[cnt:payment_value:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Payement_Dim_8AD62851F39E4B768F27E879D0366CF3:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[none:payment_type:nk]</rows>
+        <cols>[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[cnt:payment_value:qk]</cols>
+      </table>
+      <simple-id uuid='{3E094B8A-149A-4301-A7FB-2350E4106186}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='User_Dim (RetailDataWarehouse)' name='federated.0bnkg1l0kdaa6k10m6i7n0yin6h9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0bnkg1l0kdaa6k10m6i7n0yin6h9'>
+            <column-instance column='[shipping_cost]' derivation='Avg' name='[avg:shipping_cost:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[product_category]' derivation='None' name='[none:product_category:nk]' pivot='key' type='nominal' />
+            <column caption='Product Category' datatype='string' name='[product_category]' role='dimension' type='nominal' />
+            <column caption='Shipping Cost' datatype='real' name='[shipping_cost]' role='measure' type='quantitative' />
+            <column-instance column='[shipping_cost]' derivation='Sum' name='[sum:shipping_cost:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[none:product_category:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[sum:shipping_cost:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[sum:shipping_cost:qk]' value='57' />
+            <format attr='display' class='0' field='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[sum:shipping_cost:qk]' scope='cols' value='false' />
+            <format attr='height' field='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[avg:shipping_cost:qk]' value='57' />
+            <format attr='display' class='0' field='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[avg:shipping_cost:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height-header' value='20' />
+            <format attr='width' field='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[none:product_category:nk]' value='156' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[avg:shipping_cost:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#79706e' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#333333' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[none:product_category:nk]</rows>
+        <cols>[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[sum:shipping_cost:qk]</cols>
+      </table>
+      <simple-id uuid='{9E4B4792-F14D-42BD-B38B-D7321B07236A}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='16'>Total Orders</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='User_Dim (RetailDataWarehouse)' name='federated.0bnkg1l0kdaa6k10m6i7n0yin6h9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0bnkg1l0kdaa6k10m6i7n0yin6h9'>
+            <_.fcp.ObjectModelTableType.true...column caption='Order_Dim' datatype='table' name='[__tableau_internal_object_id__].[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.false...column caption='Order_Dim' datatype='integer' name='[__tableau_internal_object_id__].[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='color' value='#333333' />
+            <format attr='font-size' value='16' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{C4392FDE-33B7-4989-B719-9A54BA54527F}' />
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='16'>Average Installment</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='User_Dim (RetailDataWarehouse)' name='federated.0bnkg1l0kdaa6k10m6i7n0yin6h9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0bnkg1l0kdaa6k10m6i7n0yin6h9'>
+            <column-instance column='[payment_installments]' derivation='Avg' name='[avg:payment_installments:qk]' pivot='key' type='quantitative' />
+            <column caption='Payment Installments' datatype='integer' name='[payment_installments]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-weight' value='bold' />
+            <format attr='font-size' value='18' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[avg:payment_installments:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{1C041EAC-791A-4FF2-A702-E77128CA4BED}' />
+    </worksheet>
+    <worksheet name='Sheet 7'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='18'>Total Order By year and Quarters</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='User_Dim (RetailDataWarehouse)' name='federated.0bnkg1l0kdaa6k10m6i7n0yin6h9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0bnkg1l0kdaa6k10m6i7n0yin6h9'>
+            <_.fcp.ObjectModelTableType.true...column caption='Order_Dim' datatype='table' name='[__tableau_internal_object_id__].[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[order_date]' derivation='Month' name='[mn:order_date:ok]' pivot='key' type='ordinal' />
+            <column caption='Order Date' datatype='datetime' name='[order_date]' role='dimension' type='ordinal' />
+            <column-instance column='[order_date]' derivation='Quarter' name='[qr:order_date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[order_date]' derivation='Year' name='[yr:order_date:ok]' pivot='key' type='ordinal' />
+            <_.fcp.ObjectModelTableType.false...column caption='Order_Dim' datatype='integer' name='[__tableau_internal_object_id__].[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[mn:order_date:ok]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' palette='green_blue_white_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' />
+              <text column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[yr:order_date:ok] / ([federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[qr:order_date:ok] / [federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[mn:order_date:ok]))</rows>
+        <cols>[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]</cols>
+      </table>
+      <simple-id uuid='{C41E1872-362E-4680-8B4C-08A7A3E205FC}' />
+    </worksheet>
+    <worksheet name='Sheet 8'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='18'>Total Orders By User State</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='User_Dim (RetailDataWarehouse)' name='federated.0bnkg1l0kdaa6k10m6i7n0yin6h9' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0bnkg1l0kdaa6k10m6i7n0yin6h9'>
+            <_.fcp.ObjectModelTableType.true...column caption='Order_Dim' datatype='table' name='[__tableau_internal_object_id__].[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[user_state]' derivation='None' name='[none:user_state:nk]' pivot='key' type='nominal' />
+            <column caption='User State' datatype='string' name='[user_state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='Order_Dim' datatype='integer' name='[__tableau_internal_object_id__].[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='font-weight' value='bold' />
+            <format attr='color' value='#ffffff' />
+            <format attr='font-size' value='14' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' palette='tableau-map-temperatur' type='interpolated' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' />
+              <color column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' />
+              <text column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[none:user_state:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{C2B845BF-4FC1-4D0C-BE59-4A26EE2995C6}' />
+    </worksheet>
+    <worksheet name='Sheet 9'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='18'>Total Orders by seller state</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='User_Dim (RetailDataWarehouse)' name='federated.0bnkg1l0kdaa6k10m6i7n0yin6h9' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0bnkg1l0kdaa6k10m6i7n0yin6h9'>
+            <_.fcp.ObjectModelTableType.true...column caption='Order_Dim' datatype='table' name='[__tableau_internal_object_id__].[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[seller_state]' derivation='None' name='[none:seller_state:nk]' pivot='key' type='nominal' />
+            <column caption='Seller State' datatype='string' name='[seller_state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='Order_Dim' datatype='integer' name='[__tableau_internal_object_id__].[Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[none:seller_state:nk]' kind='hide'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:seller_state:nk]' />
+              <groupfilter function='member' level='[none:seller_state:nk]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[none:seller_state:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-size' value='12' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' value='10' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' palette='red_blue_white_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' />
+              <text column='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[none:seller_state:nk]</rows>
+        <cols>[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[__tableau_internal_object_id__].[cnt:Order_Dim_DEF0897698C146FAAE9EF1CF3B74289B:qk]</cols>
+      </table>
+      <simple-id uuid='{F050E4C0-9877-47B5-821D-DDB437D131F4}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='20'>Retail Dashboard</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='35' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='5' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+              <zone h='5625' id='7' type-v2='title' w='98400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='25125' id='27' name='Sheet 9' show-title='false' w='94200' x='1800' y='24750'>
+          <layout-cache minwidth='260' type-h='fixed' type-w='scalable' />
+        </zone>
+        <zone h='46000' id='30' name='Sheet 8' show-title='false' w='56200' x='3700' y='50500'>
+          <layout-cache fixed-size-w='404' type-h='fixed' type-w='fixed' />
+        </zone>
+        <zone fixed-size='159' h='17000' id='26' is-fixed='true' name='Sheet 2' show-title='false' w='92400' x='3600' y='6250'>
+          <layout-cache minwidth='172' type-h='fixed' type-w='scalable' />
+        </zone>
+        <zone h='40375' id='33' name='Sheet 10' show-title='false' w='35900' x='60900' y='53000'>
+          <layout-cache fixed-size-w='257' type-h='fixed' type-w='fixed' />
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontsize='20'>Retail Dashboard</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='43' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='42' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone h='5625' id='7' type-v2='title' w='98400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='136' h='17000' id='26' is-fixed='true' name='Sheet 2' show-title='false' w='92400' x='3600' y='6250'>
+                  <layout-cache minwidth='172' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='201' h='25125' id='27' is-fixed='true' name='Sheet 9' show-title='false' w='94200' x='1800' y='24750'>
+                  <layout-cache minwidth='260' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='46000' id='30' is-fixed='true' name='Sheet 8' show-title='false' w='56200' x='3700' y='50500'>
+                  <layout-cache fixed-size-w='404' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='40375' id='33' is-fixed='true' name='Sheet 10' show-title='false' w='35900' x='60900' y='53000'>
+                  <layout-cache fixed-size-w='257' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{D3776A1C-F173-4972-A880-3C3BD34A6BCB}' />
+    </dashboard>
+    <dashboard name='Story 1' type='storyboard'>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type-v2='layout-flow' w='98426' x='787' y='830'>
+            <zone h='3423' id='3' type-v2='title' w='98426' x='787' y='830' />
+            <zone h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' type-v2='flipboard-nav' w='98426' x='787' y='4253' />
+            <zone h='84440' id='5' paired-zone-id='4' removable='false' type-v2='flipboard' w='98426' x='787' y='14730'>
+              <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point captured-sheet='Sheet 4' id='1' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{AE95591F-7FF8-4D4D-AD07-FDCEE3B67966}' />
+    </dashboard>
+    <dashboard name='Story 2' type='storyboard'>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type-v2='layout-flow' w='98426' x='787' y='830'>
+            <zone h='3423' id='3' type-v2='title' w='98426' x='787' y='830' />
+            <zone h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' type-v2='flipboard-nav' w='98426' x='787' y='4253' />
+            <zone h='84440' id='5' paired-zone-id='4' removable='false' type-v2='flipboard' w='98426' x='787' y='14730'>
+              <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point captured-sheet='Sheet 1' id='1' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{E04D0BDD-7E71-4330-A6BA-4B89AEF8FB65}' />
+    </dashboard>
+    <dashboard name='Story 3' type='storyboard'>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type-v2='layout-flow' w='98426' x='787' y='830'>
+            <zone h='3423' id='3' type-v2='title' w='98426' x='787' y='830' />
+            <zone h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' type-v2='flipboard-nav' w='98426' x='787' y='4253' />
+            <zone h='84440' id='5' paired-zone-id='4' removable='false' type-v2='flipboard' w='98426' x='787' y='14730'>
+              <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point captured-sheet='Sheet 2' id='1' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{C37574C3-776A-402E-8C81-C509EA75A4B0}' />
+    </dashboard>
+    <dashboard name='Story 4' type='storyboard'>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type-v2='layout-flow' w='98426' x='787' y='830'>
+            <zone h='3423' id='3' type-v2='title' w='98426' x='787' y='830' />
+            <zone h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' type-v2='flipboard-nav' w='98426' x='787' y='4253' />
+            <zone h='84440' id='5' paired-zone-id='4' removable='false' type-v2='flipboard' w='98426' x='787' y='14730'>
+              <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point captured-sheet='Sheet 7' id='1' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{9E787688-3965-44B1-8125-85928C77AD48}' />
+    </dashboard>
+    <dashboard name='Story 5' type='storyboard'>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type-v2='layout-flow' w='98426' x='787' y='830'>
+            <zone h='3423' id='3' type-v2='title' w='98426' x='787' y='830' />
+            <zone h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' type-v2='flipboard-nav' w='98426' x='787' y='4253' />
+            <zone h='84440' id='5' paired-zone-id='4' removable='false' type-v2='flipboard' w='98426' x='787' y='14730'>
+              <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point captured-sheet='Sheet 8' id='1' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{5BD9A7F6-D1FB-4036-8BA4-929975E82342}' />
+    </dashboard>
+    <dashboard name='Story 6' type='storyboard'>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type-v2='layout-flow' w='98426' x='787' y='830'>
+            <zone h='3423' id='3' type-v2='title' w='98426' x='787' y='830' />
+            <zone h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' type-v2='flipboard-nav' w='98426' x='787' y='4253' />
+            <zone h='84440' id='5' paired-zone-id='4' removable='false' type-v2='flipboard' w='98426' x='787' y='14730'>
+              <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point captured-sheet='Sheet 9' id='1' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{1754815A-45CD-48E7-B07C-441E28998FC8}' />
+    </dashboard>
+    <dashboard name='Story 7' type='storyboard'>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type-v2='layout-flow' w='98426' x='787' y='830'>
+            <zone h='3423' id='3' type-v2='title' w='98426' x='787' y='830' />
+            <zone h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' type-v2='flipboard-nav' w='98426' x='787' y='4253' />
+            <zone h='84440' id='5' paired-zone-id='4' removable='false' type-v2='flipboard' w='98426' x='787' y='14730'>
+              <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point captured-sheet='Sheet 10' id='1' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{AAA9543A-3CED-4DA0-9373-6F1329C0516C}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[none:payment_type:nk]' type='highlighter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{FA516A75-17A7-4CAC-90F8-E56CE9DEE90B}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CD54C4F6-3705-4318-91C0-A11CE2679393}' />
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{EAF1A0D5-9FC7-4E36-B069-0873F4CBD2C8}' />
+    </window>
+    <window class='worksheet' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2DFDA672-3F88-4702-9061-51BECB4F60B1}' />
+    </window>
+    <window class='worksheet' name='Sheet 7'>
+      <cards>
+        <edge name='left'>
+          <strip size='129'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B772D217-FA44-440E-9617-B2C87859EB46}' />
+    </window>
+    <window class='worksheet' name='Sheet 8'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7290C012-F542-4414-B524-852A03770527}' />
+    </window>
+    <window class='worksheet' name='Sheet 9'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2EDE55DD-2D61-4A79-99A4-604DF93F22DD}' />
+    </window>
+    <window class='worksheet' name='Sheet 10'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[none:payment_type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{A7E9724B-B887-41EF-803B-1DA7EDB21531}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Sheet 10' />
+        <viewpoint name='Sheet 2' />
+        <viewpoint name='Sheet 8' />
+        <viewpoint name='Sheet 9' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{FC029E69-557B-4C4B-B4B9-2364A3759FB9}' />
+    </window>
+    <window class='dashboard' name='Story 1'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{5864FC7D-0171-4896-987B-690100EED55A}' />
+    </window>
+    <window class='dashboard' name='Story 2'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{20B32849-4924-4AF0-82CF-03444EADB28E}' />
+    </window>
+    <window class='dashboard' name='Story 3'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{1DC18978-95F8-4C65-830C-74411691842C}' />
+    </window>
+    <window class='dashboard' name='Story 4'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{3DA6176C-087B-451B-B2B9-10B7D417B72C}' />
+    </window>
+    <window class='dashboard' name='Story 5'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{ECE62951-B1EE-475D-811D-42D3F33621DB}' />
+    </window>
+    <window class='dashboard' name='Story 6'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{E3BB232C-FC67-40B8-B74C-C4AA6AC57EAE}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Story 7'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{A4E255A8-D653-48B0-9E2B-C9374A190819}' />
+    </window>
+    <window class='worksheet' name='Sheet 11'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0bnkg1l0kdaa6k10m6i7n0yin6h9].[none:payment_type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{3CCA7B3B-58E7-46AF-8485-7114F7C2F276}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F096778C-BFF8-4219-A49F-BC402041DF2D}' />
+    </window>
+  </windows>
+</workbook>
