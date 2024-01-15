@@ -28,7 +28,7 @@ Experience the synergy of SQL Server and Tableau as We leverage queries to uncov
 - **Actionable Intelligence:** The analysis phase, powered by SQL Server and visualized through Tableau, provides strategic insights to drive informed business decisions.
 
 
-## [1. Source Data]([1 DSourcesata ](https://github.com/ElSayed-Fathi/Data-Engineering-project-for-E-Commerce/tree/bddff4dc9b5da026356ce71fcc7a35eae41f1f7b/1%20Data%20Sources)https://github.com/ElSayed-Fathi/Data-Engineering-project-for-E-Commerce/tree/bddff4dc9b5da026356ce71fcc7a35eae41f1f7b/1%20Data%20Sources](https://github.com/ElSayed-Fathi/Data-Engineering-project-for-E-Commerce/blob/39ad69d2d37099fa41b76d7e503a428064980460/1%20Data%20Sources/README%20(2).md)https://github.com/ElSayed-Fathi/Data-Engineering-project-for-E-Commerce/blob/39ad69d2d37099fa41b76d7e503a428064980460/1%20Data%20Sources/README%20(2).md)
+## [1. Source Data](https://github.com/ElSayed-Fathi/Data-Engineering-project-for-E-Commerce/blob/39ad69d2d37099fa41b76d7e503a428064980460/1%20Data%20Sources/README%20(2).md)
 
 Data Source:
 ![Data Source](source_data.png)
