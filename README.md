@@ -34,10 +34,10 @@ Experience the synergy of SQL Server and Tableau as We leverage queries to uncov
 ## Data Source:
 ![Data Source](source_data.png)
 
-## [2. ETL Using Python]([./2.%20Staging%20Layer/README.md](https://github.com/ElSayed-Fathi/Data-Engineering-project-for-E-Commerce/tree/e25cf889b36df1a3b7c09292aefa13015643d9f6/4%20Python%20Transformation)https://github.com/ElSayed-Fathi/Data-Engineering-project-for-E-Commerce/tree/e25cf889b36df1a3b7c09292aefa13015643d9f6/4%20Python%20Transformation)
+## [2. ETL Using Python](https://github.com/ElSayed-Fathi/Data-Engineering-project-for-E-Commerce/tree/0ebbe62252ef0016922c4cb9b87696cd8b87dff1/1%20Data%20Sources)
 
-Staging Model:
-![SETL Using Python](code_example.PNG)
+ETL Using Python:
+![ETL Using Python](code_example.PNG)
 
 
 
