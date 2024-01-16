@@ -84,4 +84,14 @@ ORDER BY 'Average Delivery Days Per Order' DESC;
 ##### Best Payment Methods 
 ![Best Payment Methods](https://github.com/ElSayed-Fathi/Data-Engineering-project-for-E-Commerce/blob/6b65b53ece3c6922144ba7813b2b991c14dde1ea/7%20Data%20Visualization%20Using%20Tableau/Best_Payment_Method.png)
 
+##### Total Orders Based On Product Category 
+![Total Orders Based On Product Category](https://github.com/ElSayed-Fathi/Data-Engineering-project-for-E-Commerce/blob/91afb2b76442a9e7325dcbc40609e71e5217fa42/7%20Data%20Visualization%20Using%20Tableau/Best_Selling_Category.PNG)
 
+##### Total Orders Based On Year And Quarters  
+![Total Orders Based On Year And Quarters](https://github.com/ElSayed-Fathi/Data-Engineering-project-for-E-Commerce/blob/91afb2b76442a9e7325dcbc40609e71e5217fa42/7%20Data%20Visualization%20Using%20Tableau/Total_Order_By_year_and_Quarters.png)
+
+
+
+## Conclusion:
+
+This project showcases the integration of Alteryx for efficient ETL processes, Python for meticulous transformations, and SQL Server along with Tableau for insightful analysis. Join me in exploring the intricacies of data engineering, from CSV extraction to strategic insights in the context of an ever-evolving e-commerce industry.
