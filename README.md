@@ -39,7 +39,10 @@ Experience the synergy of SQL Server and Tableau as We leverage queries to uncov
 ### ETL Using Python:
 ![ETL Using Python](code_example.PNG)
 
+## [3. Alteryx Workflow ]([https://github.com/ElSayed-Fathi/Data-Engineering-project-for-E-Commerce/tree/0ebbe62252ef0016922c4cb9b87696cd8b87dff1/1%20Data%20Sources](https://github.com/ElSayed-Fathi/Data-Engineering-project-for-E-Commerce/tree/b23186f3ff775672d3c36ae8d8ae24422dd205e0/2%20Staging%20Layer)https://github.com/ElSayed-Fathi/Data-Engineering-project-for-E-Commerce/tree/b23186f3ff775672d3c36ae8d8ae24422dd205e0/2%20Staging%20Layer)
 
+###  Alteryx Workflow:
+![ETL Using Python]([code_example.PNG](https://github.com/ElSayed-Fathi/Data-Engineering-project-for-E-Commerce/blob/b23186f3ff775672d3c36ae8d8ae24422dd205e0/2%20Staging%20Layer/Full%20Workflow.PNG)https://github.com/ElSayed-Fathi/Data-Engineering-project-for-E-Commerce/blob/b23186f3ff775672d3c36ae8d8ae24422dd205e0/2%20Staging%20Layer/Full%20Workflow.PNG)
 
 
 
