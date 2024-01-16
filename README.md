@@ -74,7 +74,14 @@ WHERE OrderItems.DeliveryDelayCheck = 'Delayed'
 GROUP BY Sellers.SellerState, Sellers.SellerCity, Users.UserState, Users.UserCity
 ORDER BY 'Average Delivery Days Per Order' DESC;
 ```
+## [5. Final Insights](https://github.com/ElSayed-Fathi/Data-Engineering-project-for-E-Commerce/tree/6b65b53ece3c6922144ba7813b2b991c14dde1ea/7%20Data%20Visualization%20Using%20Tableau)
 
+### Dashboard:
+![Dashboard](https://github.com/ElSayed-Fathi/Data-Engineering-project-for-E-Commerce/blob/6b65b53ece3c6922144ba7813b2b991c14dde1ea/7%20Data%20Visualization%20Using%20Tableau/Dashboard_1.png)
 
+### Examples Of Useful Insights : 
+
+##### Best Payment Methods 
+![Best Payment Methods](https://github.com/ElSayed-Fathi/Data-Engineering-project-for-E-Commerce/blob/6b65b53ece3c6922144ba7813b2b991c14dde1ea/7%20Data%20Visualization%20Using%20Tableau/Best_Payment_Method.png)
 
 
