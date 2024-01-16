@@ -49,7 +49,31 @@ Experience the synergy of SQL Server and Tableau as We leverage queries to uncov
 ###  Data Warehouse Model :
 ![Data Warehouse Model](Data_Warehouse_Diagram_11_light.png)
 
+## [4. Analysis using SQL](https://github.com/ElSayed-Fathi/Data-Engineering-project-for-E-Commerce/tree/1e6ea70c5581a9dd6c38f746ea4f135d3c794e44/6%20SQL%20Analytical%20Queries)
 
+Example of the analysis:
+Question: 
+
+Which Logistic Route Has Heavy Traffic In Our E-Commerce? (Delay Frequency)
+
+```sql
+SELECT TOP 10 CONCAT(Sellers.SellerState, ', ', Sellers.SellerCity,' ==>> ', Users.UserState, ', ', Users.UserCity) 'Logistic Route', AVG(SubQuery.MaxDeliveryDelayDays) / 
+           COUNT(DISTINCT(OrderItems.OrderID)) AS 'Average Delivery Days Per Order'
+FROM (
+    SELECT OrderItems.OrderID, MAX(OrderItems.DeliveryDelayDays*1.0) AS MaxDeliveryDelayDays
+    FROM OrderItems
+	WHERE OrderItems.DeliveryDelayCheck = 'Delayed'
+    GROUP BY OrderItems.OrderID
+) AS SubQuery
+JOIN OrderItems ON SubQuery.OrderID = OrderItems.OrderID
+JOIN Users
+ON Users.UserID = OrderItems.UserID
+JOIN Sellers
+ON Sellers.SellerID = OrderItems.SellerID
+WHERE OrderItems.DeliveryDelayCheck = 'Delayed'
+GROUP BY Sellers.SellerState, Sellers.SellerCity, Users.UserState, Users.UserCity
+ORDER BY 'Average Delivery Days Per Order' DESC;
+```
 
 
 
