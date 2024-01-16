@@ -47,7 +47,7 @@ Experience the synergy of SQL Server and Tableau as We leverage queries to uncov
 ## [4. Data Warehouse Model ](https://github.com/ElSayed-Fathi/Data-Engineering-project-for-E-Commerce/tree/cc7b833140ddde630aa206cfcacba4e7d713dc18/5%20Data%20Warehouse%20Dimensional%20Model%20and%20Code)
 
 ###  Data Warehouse Model :
-![Data Warehouse Model](Data Warehouse Diagram 11 light.jpg)
+![Data Warehouse Model](Data_Warehouse_Diagram_11_light.png)
 
 
 
